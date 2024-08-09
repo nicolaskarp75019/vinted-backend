@@ -6,6 +6,7 @@ const cloudinary = require("cloudinary").v2;
 const cors = require("cors");
 
 require("dotenv").config();
+const app = express();
 app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI);
@@ -16,7 +17,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_APISECRET,
 });
 
-const app = express();
 app.use(express.json());
 
 mongoose.connect("mongodb://localhost:27017/vinted");
