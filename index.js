@@ -19,8 +19,6 @@ cloudinary.config({
 
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/vinted");
-
 app.use("/offer", offerRoutes);
 app.use("/uploads", express.static("uploads"));
 
